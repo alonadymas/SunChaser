@@ -1,3 +1,6 @@
+import location_client
+
+
 def count_weather_matches(search_filter, forecast_list):
     # If search_filter is just a string, convert it to a list
     if isinstance(search_filter, str):
@@ -13,3 +16,4 @@ def count_weather_matches(search_filter, forecast_list):
 
     # Return count of matches
     return count
+

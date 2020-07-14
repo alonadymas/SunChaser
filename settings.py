@@ -1,4 +1,31 @@
 # ==========================
+# API Settings
+# ==========================
+chase_weather_body_required_fields = ['origin', 'radius', 'sic_codes', 'weather_types']
+chase_weather_expected_data_types ={
+    'origin': [str, int],
+    'radius': [int, str, float],
+    'sic_codes': [int, list, str],
+    'weather_types': [str, list]
+}
+# ==========================
+# Misc Settings
+# ==========================
+destination_types_by_sic_code = {
+    581208: 'Restaurants',
+    581301: 'Bars',
+    581214: 'Cafes',
+    799951: 'Parks',
+    902209: 'Lakes/Ponds',
+    701107: 'Bed & Breakfasts',
+    703301: 'Campgrounds',
+    581305: 'Pubs',
+    901006: 'Beaches',
+    999333: 'Tourist Attractions',
+    842201: 'Zoos'
+}
+
+# ==========================
 # MapQuest API Settings
 # ==========================
 mapquest_radius_search_url = 'http://www.mapquestapi.com/search/v2/radius'
@@ -10,7 +37,7 @@ sic_codes = {
     'bars': 581301,
     'cafes': 581214,
     'parks': 799951,
-    'reservoirs': 902209,
+    'Lakes_and_ponds': 902209,
     'bed_and_breakfasts': 701107,
     'campgrounds': 703301,
     'pubs': 581305,

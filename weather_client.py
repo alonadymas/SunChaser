@@ -8,6 +8,13 @@ accuweather_api_key = settings.accuweather_api_key
 accuweather_language = settings.accuweather_language
 
 
+def get_forecast_by_postal_code(postal_code):
+    location_key = get_location_key(postal_code)
+    forecast = get_forecast(location_key)
+
+    return forecast
+
+
 def get_location_key(postal_code):
     params = {
         'apikey': accuweather_api_key,
